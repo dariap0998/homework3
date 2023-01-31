@@ -104,6 +104,7 @@ public class Main {
           System.out.println("Максимальное количество дней, чтобы спортсмен сбросил 7 кг "  + daysNeeded1 + " дней.");
           System.out.println("Минимальное количество дней, чтобы спортсмен сбросил 7 кг " + daysNeeded2 + " дней.");
           System.out.println("Чтобы сбросить 7 кг, спортсмену потребуется в среднем " + avrDays + " день.");
+
       }
       public static void task8() {
           System.out.println("Задача 8");

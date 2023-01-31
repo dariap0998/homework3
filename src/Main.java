@@ -17,7 +17,7 @@ public class Main {
           System.out.println("Значение переменной b с типом byte равно " + b);
           short k = -22000;
           System.out.println("Значение переменной k с типом short равно " + k);
-          long d = 13456738909L;
+          long d = 1_456_738_909;
           System.out.println("Значение переменной d с типом long равно " + d);
           float f = 3.03f;
           System.out.println("Значение переменной f с типом float равно " + f);
@@ -32,25 +32,26 @@ public class Main {
           double temp = 2.786;
           short cats = 569;
           short hours = -159;
-          short days = 27897;
+          int days = 27897;
           byte years = 67;
-          System.out.println("Значения " + apples + ", " + shrimps + ", " + temp + ", " + cats + ", " + hours + ", " + days + " и " + years + " успешно инициализированы.");
-
+          System.out.println("Числа " + apples + ", " +  shrimps + ", " +  temp + ", " + cats+ ", "  + hours + ", " + days + ", " + years + " инициализированы");
       }
       public static void task3 () {
           System.out.println("Задача 3");
-          byte classLudmila = 23;
-          byte classAnna = 27;
-          byte classEkaterina = 30;
-          short paper = 480;
-          byte allStudents = (byte) (classAnna + classEkaterina + classLudmila);
-          short papersForOne = (short) (paper / allStudents);
+          int classLudmila = 23;
+          int classAnna = 27;
+          int classEkaterina = 30;
+          int paper = 480;
+          int allStudents = classAnna + classEkaterina + classLudmila;
+          int papersForOne = paper / allStudents;
           System.out.println("На каждого ученика рассчитано " + papersForOne + " листов бумаги.");
 
       }
       public static void task4() {
           System.out.println("Задача 4");
-          byte bottlePerMin = 16 / 2;
+          byte bottle = 16;
+          byte min = 2;
+          byte bottlePerMin = (byte) (bottle / min);
           short bottlePer20Min = (short) (bottlePerMin * 20);
           System.out.println("За 20 минут машина произвела " + bottlePer20Min + " штук бутылок.");
           short bottlePerHour = (short) (bottlePer20Min * 3);
@@ -95,10 +96,13 @@ public class Main {
           byte needToLose = 7;
           short losePerDay1 = 250;
           short losePerDay2 = 500;
-          short kgToGrams = (short) (needToLose * 1000);
-          short daysNeeded1 = (short) (kgToGrams / losePerDay1);
-          short daysNeeded2 = (short) (kgToGrams / losePerDay2);
-          short avrDays = (short) ((daysNeeded1 + daysNeeded2)/2);
+          short kgToGrams = (short) (needToLose * 1000); //7000
+          double daysNeeded1 = (double) kgToGrams / losePerDay1; //28
+          double daysNeeded2 = (double) kgToGrams / losePerDay2; //14
+          double loseWeightAvgPerDay = (losePerDay1 + losePerDay2) / 2D;
+          double avrDays = kgToGrams / loseWeightAvgPerDay;
+          System.out.println("Максимальное количество дней, чтобы спортсмен сбросил 7 кг "  + daysNeeded1 + " дней.");
+          System.out.println("Минимальное количество дней, чтобы спортсмен сбросил 7 кг " + daysNeeded2 + " дней.");
           System.out.println("Чтобы сбросить 7 кг, спортсмену потребуется в среднем " + avrDays + " день.");
       }
       public static void task8() {
@@ -106,15 +110,16 @@ public class Main {
           int mashaSalary = 67760;
           int denisSalary = 83690;
           int kristinaSalary = 76230;
-          float newMashaSalary = mashaSalary * 1.1f;
+          double index = 1.1;
+          double newMashaSalary = mashaSalary * index;
           int differenceMasha = (int) newMashaSalary - mashaSalary;
           int yearMashaSalary = differenceMasha * 12;
           System.out.println("Маша теперь получает " + newMashaSalary + " рублей. Годовой доход вырос на " + yearMashaSalary + " рублей.");
-          float newDenisSalary = denisSalary * 1.1f;
+          double newDenisSalary = denisSalary * index;
           int differenceDenis = (int) newDenisSalary - denisSalary;
           int yearDenisSalary = differenceDenis * 12;
           System.out.println("Денис теперь получает " + newDenisSalary + " рублей. Годовой доход вырос на " + yearDenisSalary + " рубей.");
-          float newKristinaSalary = kristinaSalary * 1.1f;
+          double newKristinaSalary = kristinaSalary * index;
           int differenceKristina = (int) newKristinaSalary - kristinaSalary;
           int yearKristinaSalary = differenceKristina * 12;
           System.out.println("Кристина теперь получает " + newKristinaSalary + "рублей. Годовой доход вырос на " + yearKristinaSalary + " рублей.");
